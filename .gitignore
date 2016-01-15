@@ -1,0 +1,7 @@
+.idea/
+.DS_Store
+src/shared/vendor
+node_modules/
+npm-debug.log
+public/*
+build/*
