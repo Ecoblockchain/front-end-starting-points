@@ -47,7 +47,21 @@ module.exports = function(grunt) {
 		},
 
 		less: {
-
+			dev: {
+				options: {
+					sourceMap: true,
+					expand: true,
+					flatten: true,
+					compress: true,
+					ieCompat: true,
+					strictImports: true,
+					filter: 'isFile',
+					relativeUrls: true
+				},
+				files: {
+					'src/stylesheets/main.css': 'src/less/main.less',
+				}
+			}
 		}
 
 
