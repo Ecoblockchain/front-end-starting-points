@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 					port: 9000,
 					hostname: "0.0.0.0",
 					keepalive: true,
-					bases: ['src'],
+					bases: ['public'],
 					livereload: true
 				}
 			}
@@ -33,17 +33,25 @@ module.exports = function(grunt) {
 		watch: {
 			all: {
 				options: {
-					spawn: false, // DO NOT FUTZ WITH ME
-					livereload: true, // use chrome plugin just in
-					debounceDelay: 2000, // TODO: should work with underscore above
+					spawn: false,
+					livereload: true,
+					debounceDelay: 2000,
 				},
-				// files that are being watched...
 				files: ['src/**/*.html', 'src/**/*.js', 'src/**/*.less']
 			}
 		},
 
 		copy: {
-
+			main: {
+				files: [
+					{
+						expand: true,
+						cwd: 'src/',
+						src: ['**/*.html', '**/*.js', 'images/*'],
+						dest: 'public/'
+					},
+				]
+			}
 		},
 
 		less: {
@@ -59,7 +67,7 @@ module.exports = function(grunt) {
 					relativeUrls: true
 				},
 				files: {
-					'src/stylesheets/main.css': 'src/less/main.less',
+					'public/stylesheets/main.css': 'src/less/main.less',
 				}
 			}
 		}
@@ -69,13 +77,14 @@ module.exports = function(grunt) {
 
   	grunt.registerTask('server', 'Run grunt-express server, open broswer and then watch files', ['express', 'open', 'watch']);
 
-	grunt.registerTask('default', '', ['server']);
+	grunt.registerTask('default', '', ['copy', 'less', 'server']);
 
   	// grunt.registerTask('build', 'Build the web application for deployment', ['copy', 'requirejs');
 
-	// grunt.event.on('watch', function (action, filepath) {
-		// grunt.task.run('copy');
-	// });
+	grunt.event.on('watch', function (action, filepath) {
+		grunt.task.run('copy');
+		grunt.task.run('less');
+	});
 
 
 }
