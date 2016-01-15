@@ -29,3 +29,6 @@ bower install
 npm install
 ```
 
+For more information about livereload with grunt look [here](http://rhumaric.com/2013/07/renewing-the-grunt-livereload-magic/).
+
+

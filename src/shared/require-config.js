@@ -9,9 +9,9 @@ require.config({
 		json2: 'vendor/json2/json2.js',
 	},
 
-	map: {
+	// map: {
 
-	},
+	// },
 
 	shim: {
 		jquery: {

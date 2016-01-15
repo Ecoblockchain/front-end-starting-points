@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
-	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-express');
+	grunt.loadNpmTasks('grunt-open');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
@@ -11,19 +12,31 @@ module.exports = function(grunt) {
 
 		pkg: grunt.file.readJSON('package.json'),
 
-		connect: {
+		express: {
 			all: {
 				options: {
 					port: 9000,
 					hostname: "0.0.0.0",
 					keepalive: true,
-					base: 'src'
+					bases: ['src'],
+					livereload: true
 				}
 			}
 		},
 
-		watch: {
+		open: {
+			all: {
+				path: 'http://localhost:<%= express.all.options.port%>'
+			}
+		},
 
+		watch: {
+			all: {
+				files: 'index.html',
+				options: {
+					livereload: true
+				}
+			}
 		},
 
 		copy: {
@@ -37,15 +50,15 @@ module.exports = function(grunt) {
 
 	});
 
-  	grunt.registerTask('server', 'Run node serve', ['connect']);
+  	grunt.registerTask('server', 'Run grunt-express server', ['express', 'open', 'watch']);
 
 	grunt.registerTask('default', 'Run server, auto compile files, and reload browser', ['watch']);
 
   	// grunt.registerTask('build', 'Build the web application for deployment', ['copy', 'requirejs');
 
-	grunt.event.on('watch', function (action, filepath) {
+	// grunt.event.on('watch', function (action, filepath) {
 		// grunt.task.run('copy');
-	});
+	// });
 
 
 }
