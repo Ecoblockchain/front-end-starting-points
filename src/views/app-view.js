@@ -16,7 +16,7 @@ define(function(require) {
 
         render: function() {
         this.$el.html(this.template({
-            appVar: 'hello underscore template variable'
+            appVar: '_.template var'
         }));
         return this;
         }
