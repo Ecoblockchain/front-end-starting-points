@@ -37,9 +37,9 @@ npm install -g grunt-cli
 ```
 For more information about livereload with grunt look [here](http://rhumaric.com/2013/07/renewing-the-grunt-livereload-magic/).
 
-###Start the server
+###Run the default Grunt task which will start the server
 ```bash
-grunt server
+grunt
 ```
 
 Please see Gruntfile.js for how it's done.
