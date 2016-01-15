@@ -4,10 +4,6 @@ require(['backbone', 'views/app-view'],
 
     'use strict';
 
-    // console.log('index.js jQuery', jQuery);
-    // console.log('index.js underscore', _);
-    // console.log('index.js Backbone', Backbone);
-
     // var router = new AppRouter();
     // Backbone.history.start({
     //   root: '/'
