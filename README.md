@@ -5,13 +5,16 @@
 ###Install homebrew
 
 the package manager that Apple forgot.
-```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 ###Install Node.js via homebrew
 ```bash
 brew install node
+```
+
+###Install npm Project Packages
+```bash
+npm install
 ```
 
 ###Install bower
@@ -23,11 +26,6 @@ npm install -g bower
 ###Install bower Project Packages
 ```bash
 bower install
-```
-
-###Install npm Project Packages
-```bash
-npm install
 ```
 
 ###Install Grunt CLI
@@ -43,9 +41,3 @@ grunt
 ```
 
 Please see Gruntfile.js for how it's done.
-
-
-
-
-
-
