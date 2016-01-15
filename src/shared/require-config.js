@@ -6,7 +6,8 @@ require.config({
 		jquery: 'shared/vendor/jquery/dist/jquery.min',
 		underscore: 'shared/vendor/underscore/underscore-min',
 		backbone: 'shared/vendor/backbone/backbone-min',
-		json2: 'shared/vendor/json2/json2'
+		json2: 'shared/vendor/json2/json2',
+		text: 'shared/vendor/text/text'
 	},
 
 	// map: {

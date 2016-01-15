@@ -14,9 +14,10 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install node
 ```
 
-###Install Grunt CLI
+###Install bower
+For more information go to [bower](http://bower.io/)
 ```bash
-npm install -g grunt-cli
+npm install -g bower
 ```
 
 ###Install bower Project Packages
@@ -29,6 +30,22 @@ bower install
 npm install
 ```
 
+###Install Grunt CLI
+For more information go to [gruntjs](http://gruntjs.com/)
+```bash
+npm install -g grunt-cli
+```
 For more information about livereload with grunt look [here](http://rhumaric.com/2013/07/renewing-the-grunt-livereload-magic/).
+
+###Start the server
+```bash
+grunt server
+```
+
+Please see Gruntfile.js for how it's done.
+
+
+
+
 
 

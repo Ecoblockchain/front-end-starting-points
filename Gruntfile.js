@@ -32,10 +32,13 @@ module.exports = function(grunt) {
 
 		watch: {
 			all: {
-				files: 'index.html',
 				options: {
-					livereload: true
-				}
+					spawn: false, // DO NOT FUTZ WITH ME
+					livereload: true, // use chrome plugin just in
+					debounceDelay: 2000, // TODO: should work with underscore above
+				},
+				// files that are being watched...
+				files: ['src/**/*.html', 'src/**/*.js', 'src/**/*.less']
 			}
 		},
 
@@ -50,9 +53,9 @@ module.exports = function(grunt) {
 
 	});
 
-  	grunt.registerTask('server', 'Run grunt-express server', ['express', 'open', 'watch']);
+  	grunt.registerTask('server', 'Run grunt-express server, open broswer and then watch files', ['express', 'open', 'watch']);
 
-	grunt.registerTask('default', 'Run server, auto compile files, and reload browser', ['watch']);
+	grunt.registerTask('default', '', ['server']);
 
   	// grunt.registerTask('build', 'Build the web application for deployment', ['copy', 'requirejs');
 
