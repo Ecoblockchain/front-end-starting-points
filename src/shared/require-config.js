@@ -1,12 +1,12 @@
 require.config({
 
-	baseUrl: '/',
+	baseUrl: '../',
 
 	paths: {
-		jquery: 'vendor/jquery/jquery.min.js',
-		underscore: 'vendor/underscore/undercore-min.js',
-		backbone: 'vendor/backbone/backbone-min.js',
-		json2: 'vendor/json2/json2.js',
+		jquery: 'shared/vendor/jquery/dist/jquery.min',
+		underscore: 'shared/vendor/underscore/underscore-min',
+		backbone: 'shared/vendor/backbone/backbone-min',
+		json2: 'shared/vendor/json2/json2'
 	},
 
 	// map: {
@@ -21,12 +21,12 @@ require.config({
 			exports: '_'
 		},
 		backbone: {
-			deps: ['jQuery', 'underscore', 'json2'],
+			deps: ['jquery', 'underscore', 'json2'],
 			exports: 'Backbone'
 		},
     	json2: {
       		exports: 'JSON'
-    	},
+    	}
 	}
 
 });

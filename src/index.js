@@ -1,10 +1,13 @@
-require(['backbone'],
+require(['jquery', 'underscore', 'backbone'],
 
-  	function(Backbone) {
+  	function(jQuery) {
 
     'use strict';
 
-    console.log('index.js', Backbone);
+    console.log('index.js jQuery', jQuery);
+    console.log('index.js underscore', _);
+    console.log('index.js Backbone', Backbone);
+
 
     // var router = new AppRouter();
 
