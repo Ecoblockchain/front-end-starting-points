@@ -1,0 +1,30 @@
+{
+  "name": "front-end-template",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Frank Heiss <fheiss@wealthmsi.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/shared/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "underscore": "~1.8.3",
+    "backbone": "~1.2.3",
+    "requirejs": "~2.1.22",
+    "json2": "*"
+  }
+}
