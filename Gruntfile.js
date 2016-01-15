@@ -72,55 +72,10 @@ module.exports = function(grunt) {
 			}
 		}
 
-		/*
-		requirejs: {
-			build: {
-				options: {
-
-					// where the source files are... If this option is specified, then
-					// all files from the src directory will be copied to the dir: output area,
-					// and baseUrl will assume to be a relative path under this directory.
-					appDir: './public',
-
-					// If appDir is set, then baseUrl should be specified as relative to the appDir.
-					baseUrl: 'shared',
-
-					// The directory path to save the output.
-					dir: 'build/public',
-
-					// http://stackoverflow.com/a/23931715/742624,
-					// http://jrburke.com/2014/02/16/requirejs-2.1.11-released/
-					wrapShim: true,
-
-					keepBuildDir: false,
-					mainConfigFile: './public/shared/require-config.js',
-					// findNestedDependencies: true,
-					optimizeCss: 'none',
-					optimize: 'uglify2',
-					generateSourceMaps: true,
-					preserveLicenseComments: false,
-					useStrict: true,
-
-					modules: [
-						{
-							name: '../../index',
-							out: '../../index'
-						}
-					]
-				}
-			}
-		},
-		*/
-
-
-
 	});
 
   	grunt.registerTask('server', 'Run grunt-express server, open broswer and then watch files', ['express', 'open', 'watch']);
-  	// grunt.registerTask('build', 'Build the web application for deployment', ['copy', 'requirejs']);
 	grunt.registerTask('default', '', ['copy', 'less', 'server']);
-
-  	// grunt.registerTask('build', 'Build the web application for deployment', ['copy', 'requirejs');
 
 	grunt.event.on('watch', function (action, filepath) {
 		grunt.task.run('copy');
