@@ -7,7 +7,8 @@ require.config({
 		underscore: 'shared/vendor/underscore/underscore-min',
 		backbone: 'shared/vendor/backbone/backbone-min',
 		json2: 'shared/vendor/json2/json2',
-		text: 'shared/vendor/text/text'
+		text: 'shared/vendor/text/text',
+		bootstrapjs: 'shared/vendor/bootstrap/dist/js/bootstrap'
 	},
 
 	// map: {
@@ -27,7 +28,11 @@ require.config({
 		},
     	json2: {
       		exports: 'JSON'
-    	}
+    	},
+    	bootstrapjs: {
+      		deps: ['jquery'],
+      		exports: '$.fn.collapse' // bootstrap-added jquery fn
+      	}
 	}
 
 });

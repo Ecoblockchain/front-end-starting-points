@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 					relativeUrls: true
 				},
 				files: {
-					'public/stylesheets/main.css': 'src/less/main.less',
+					'public/stylesheets/main.css': 'src/less/main.less'
 				}
 			}
 		}
