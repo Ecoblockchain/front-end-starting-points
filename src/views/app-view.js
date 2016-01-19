@@ -15,10 +15,10 @@ define(function(require) {
         },
 
         render: function() {
-        this.$el.html(this.template({
-            appVar: '_.template var'
-        }));
-        return this;
+            this.$el.html(this.template({
+                appVar: '_.template var'
+            }));
+            return this;
         }
 
     });
