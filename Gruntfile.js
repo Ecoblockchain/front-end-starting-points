@@ -78,8 +78,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', '', ['copy', 'less', 'server']);
 
 	grunt.event.on('watch', function (action, filepath) {
-		grunt.task.run('copy');
 		grunt.task.run('less');
+		grunt.task.run('copy');
 	});
 
 
