@@ -2,10 +2,10 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-express');
 	grunt.loadNpmTasks('grunt-open');
-	grunt.loadNpmTasks('grunt-contrib-requirejs');
+	// grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-less');
+	// grunt.loadNpmTasks('grunt-contrib-less');
 
 
 	grunt.initConfig({
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 					port: 9000,
 					hostname: "0.0.0.0",
 					keepalive: true,
-					bases: ['public'],
+					bases: ['served'],
 					livereload: true
 				}
 			}
@@ -34,10 +34,10 @@ module.exports = function(grunt) {
 			all: {
 				options: {
 					spawn: false,
-					livereload: true,
-					debounceDelay: 2000,
+					livereload: true
+					// debounceDelay: 2000,
 				},
-				files: ['src/**/*.html', 'src/**/*.js', 'src/**/*.less']
+				files: ['site/**/*.html', 'site/**/*.js', 'site/**/*.css']
 			}
 		},
 
@@ -46,41 +46,21 @@ module.exports = function(grunt) {
 				files: [
 					{
 						expand: true,
-						cwd: 'src/',
+						cwd: 'site/',
 						src: ['**/*.html', '**/*.css', '**/*.js', 'images/*'],
-						dest: 'public/'
+						dest: 'served/'
 					},
 				]
-			}
-		},
-
-		less: {
-			dev: {
-				options: {
-					sourceMap: true,
-					expand: true,
-					flatten: true,
-					compress: true,
-					ieCompat: true,
-					strictImports: true,
-					filter: 'isFile',
-					relativeUrls: true
-				},
-				files: {
-					'public/stylesheets/main.css': 'src/less/main.less'
-				}
 			}
 		}
 
 	});
 
-  	grunt.registerTask('server', 'Run grunt-express server, open broswer and then watch files', ['express', 'open', 'watch']);
-	grunt.registerTask('default', '', ['copy', 'less', 'server']);
+  grunt.registerTask('server', 'Run grunt-express server, open broswer and then watch files', ['express', 'open', 'watch']);
+	grunt.registerTask('default', '', ['copy', 'server']);
 
 	grunt.event.on('watch', function (action, filepath) {
-		grunt.task.run('less');
 		grunt.task.run('copy');
 	});
-
 
 }

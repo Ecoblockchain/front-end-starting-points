@@ -1,4 +1,4 @@
-#Front End Template
+#Front End Templates
 
 This is a starting point for front end development that I put together recently for my own use and stored here to keep track of. It uses npm, bower, grunt, and LESS as well as the following Javascript libraries: jQuery, Underscore, Backbone (with computedfields) and RequireJS. Bootstrap 3 is also there. If you want to make it **way more better for you** then go ahead.
 
