@@ -15,19 +15,7 @@
   "ignore": [
     "**/.*",
     "node_modules"
-    // "bower_components",
-    // "src/shared/vendor",
-    // "test",
-    // "tests"
   ],
   "dependencies": {
-    // "jquery": "~2.2.0",
-    // "underscore": "~1.8.3",
-    // "backbone": "~1.2.3",
-    // "requirejs": "~2.1.22",
-    // "json2": "*",
-    // "text": "requirejs-text#~2.0.14",
-    // "bootstrap": "~3.3.6",
-    // "backbone-computedfields": "~0.0.11"
   }
 }
