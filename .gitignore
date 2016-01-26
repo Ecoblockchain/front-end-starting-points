@@ -1,8 +1,0 @@
-.idea/
-.DS_Store
-src/shared/vendor
-src/stylesheets
-node_modules/
-npm-debug.log
-public/*
-build/*
