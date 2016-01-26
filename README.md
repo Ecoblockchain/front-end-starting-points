@@ -1,45 +1,18 @@
 #Just the Server
 
-This is a stripped down node server with livereload.
+This is a stripped down grunt-express node server with livereload. The files you want to serve should be put in the `./site` directory and when those files are modifed and saved, they will then be copied into the `./served' directory and displayed in all their glory. 
 
 ##Setup Instructions
 
-###Environment
+###Environment Setup
 
-####Install homebrew
+Please see the master branch to make sure you have your environment setup as needed.
 
-The package manager that Apple forgot.
-```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-####Install Node.js via homebrew
-```bash
-brew install node
-```
-
-####Install bower
-For more information see [bower](http://bower.io/).
-```bash
-npm install -g bower
-```
-
-####Install Grunt CLI
-For more information see [gruntjs](http://gruntjs.com/).
-```bash
-npm install -g grunt-cli
-```
-
-###Project
+###Project Setup
 
 ####Install npm Project Packages
 ```bash
 npm install
-```
-
-####Install bower Project Packages
-```bash
-bower install
 ```
 
 ###Run the default Grunt task (which starts the server)
@@ -47,6 +20,6 @@ bower install
 grunt
 ```
 
-Please see Gruntfile.js for how it's done.
+There is a bower.json and .bowerrc file included here but there are no dependencies and nothing is installed. 
 
-For more information about livereload using grunt and express see [this](http://rhumaric.com/2013/07/renewing-the-grunt-livereload-magic/).
+For more information on installing packages with bower, please visit [the Bower website.](http://bower.io/).
