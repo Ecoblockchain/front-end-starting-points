@@ -1,10 +1,10 @@
-#Front End Template
+#Require, Backbone and Twitter Bootstrap
 
-This is a starting point for front end development that I put together recently for my own use and stored here to keep track of. It uses npm, bower, grunt, and LESS as well as the following Javascript libraries: jQuery, Underscore, Backbone (with computedfields) and RequireJS. Bootstrap 3 is also there. If you want to make it **way more better for you** then go ahead.
+A match made in heaven. This is a starting point for front end development that I put together recently for my own use and stored here to keep track of. It uses npm, bower, grunt, and LESS as well as the following Javascript libraries: jQuery, Underscore, Backbone (with computedfields) and RequireJS. Bootstrap 3 is also there. If you want to make this **way more better for you** in any way, then go ahead.
 
 ##Setup Instructions
 
-###Environment
+###Environment Setup
 
 ####Install homebrew
 
@@ -30,7 +30,7 @@ For more information see [gruntjs](http://gruntjs.com/).
 npm install -g grunt-cli
 ```
 
-###Project
+###Project Setup
 
 ####Install npm Project Packages
 ```bash
@@ -47,6 +47,11 @@ bower install
 grunt
 ```
 
-Please see Gruntfile.js for how it's done.
+Please see Gruntfile.js for how it's done. 
+F
+or more information about livereload using grunt and express see [this.](http://rhumaric.com/2013/07/renewing-the-grunt-livereload-magic/).
 
-For more information about livereload using grunt and express see [this](http://rhumaric.com/2013/07/renewing-the-grunt-livereload-magic/).
+Or check out :
+- [GruntJS](http://gruntjs.com/)
+- [Bower](http://bower.io/)
+- [ExpressJS](http://expressjs.com/)
