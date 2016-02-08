@@ -1,6 +1,11 @@
 #Front End Starting Points
 
-Contained in this repo are several branches, each of which can be used as a starting point for various web applications.
+Contained in this repo are several branches:
+
+- just-the-server 
+- require-backbone-bootstrap
+
+These may be used as starting points for web applications and merged into the empty master branch.
 
 ##Setup Instructions
 In order to set up your environment and have everything run pleasantly without throwing any errors. Follow the instructions below.
