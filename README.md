@@ -1,6 +1,6 @@
 #Front End Starting Points
 
-Contained in this repo are several branches:
+Contained in this repo are some branches:
 
 - just-the-server 
 - require-backbone-bootstrap
